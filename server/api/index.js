@@ -10,6 +10,7 @@ router.get('/purchases', async (req, res) => {
 });
 
 router.post('/purchases', async (req, res) => {
+    console.log(req.body);
     const { purchase } = req.body;
     const {name, description, cost, method } = purchase;
     if (!name || !description || !cost || !method) {
